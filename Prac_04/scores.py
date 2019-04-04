@@ -19,7 +19,6 @@ def main():
     """Read and display student scores from scores file."""
     scores_file = open("scores.csv")
     scores_data = scores_file.readlines()
-    # print(scores_data)
     subjects = scores_data[0].strip().split(",")
     score_values = []
     for score_line in scores_data[1:]:
@@ -38,7 +37,6 @@ def reorganise_scores_by_subject(score_values):
     for _ in range(number_of_subjects):
         scores_for_one_subject = []
         for scores in score_values:
-            # pop first score from by-student scores into the by-subject scores
             scores_for_one_subject.append(scores.pop(0))
         subject_scores.append(scores_for_one_subject)
     return subject_scores
