@@ -8,8 +8,8 @@ STATE_NAMES = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Te
                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania"}
 # print(STATE_NAMES)
 
-for i, j in STATE_NAMES.items():
-    print("{:<3} is {:>5}".format(i, j))
+for short_name, long_name in STATE_NAMES.items():
+    print("{:<3} is {:>5}".format(short_name, long_name))
 
 state = input("Enter short state: ").upper()
 while state != "":

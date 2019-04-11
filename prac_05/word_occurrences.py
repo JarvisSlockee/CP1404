@@ -20,9 +20,9 @@ for word in words:
     occurrence = word_count.get(word, 0)
     word_count[word] = occurrence + 1
 
-text = list(word_count.keys())
-text.sort()
+words = list(word_count.keys())
+words.sort()
 
 max_length = max((len(word) for word in words))
-for word in text:
+for word in words:
     print("{:{}} : {}".format(word, max_length, word_count[word]))
