@@ -54,9 +54,15 @@ def demo_walk():
         print("\tcontains subdirectories:", subdirectories)
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
+        print(filenames)
 
         # TODO: add a loop to rename the files
+    for directory_name, subdirectories, filenames in os.walk('.'):
+        for filename in filenames:
+            new_name= os.path.join(directory_name, get_fixed_filename(filename))
+            os.rename(os.path.join(directory_name, filename), new_name)
+            print(new_name)
 
 
-main()
-# demo_walk()
+# main()
+demo_walk()
